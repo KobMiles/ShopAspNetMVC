@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35327.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "20250118_ShopAspNetMvc", "20250118_ShopAspNetMvc\20250118_ShopAspNetMvc.csproj", "{BEDF8B12-4AC1-4CBA-B897-D60DEFC270C0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BEDF8B12-4AC1-4CBA-B897-D60DEFC270C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEDF8B12-4AC1-4CBA-B897-D60DEFC270C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEDF8B12-4AC1-4CBA-B897-D60DEFC270C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEDF8B12-4AC1-4CBA-B897-D60DEFC270C0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6A9E1B65-776F-40F7-BBC9-F0AE0CD0C62D}
+	EndGlobalSection
+EndGlobal
