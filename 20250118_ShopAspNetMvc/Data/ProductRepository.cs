@@ -1,4 +1,6 @@
 ﻿using _20250118_ShopAspNetMvc.Models;
+using Microsoft.AspNetCore.Http.HttpResults;
+using Microsoft.EntityFrameworkCore;
 
 namespace _20250118_ShopAspNetMvc.Data
 {
@@ -13,7 +15,20 @@ namespace _20250118_ShopAspNetMvc.Data
 
         public IEnumerable<Product> GetAllProducts()
         {
-            return _context.Products;
+            return _context.Products.Include(x => x.Category);
         }
+
+        public Product? GetProductById(int id)
+        {
+            var product = _context.Products.Include(x => x.Category).FirstOrDefault(x => x.Id == id);
+            return product;
+        }
+
+        public void DeleteProduct(Product product)
+        {
+            _context.Products.Remove(product);
+            _context.SaveChanges();
+        }
+
     }
 }
