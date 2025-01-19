@@ -15,7 +15,10 @@
                     <img src="@item.ImageUrl" class="card-img-top" alt="@item.Name">
                     <div class="card-body">
                         <h5 class="card-title">@item.Name</h5>
-                        <p class="card-text">@item.Price$ - Available: @item.Quantity</p>
+                        <p class="card-text">
+                            @item.Price$ - Available: @item.Quantity <br/>
+                            @item.Category?.Name
+                        </p>
                         <a href="#" class="btn btn-primary">Add to Cart</a>
                     </div>
                 </div>

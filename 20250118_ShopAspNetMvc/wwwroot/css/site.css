@@ -42,3 +42,7 @@ header {
 .header_logo {
     max-height: 60px;
 }
+
+.product-image {
+    height: 50px;
+}

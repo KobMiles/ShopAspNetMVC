@@ -1,0 +1,47 @@
+﻿@using _20250118_ShopAspNetMvc.ViewModels
+@model ProductCategoryViewModel
+
+<h1>Create New Product</h1>
+
+<form class="row g-3" asp-action="Create" method="post">
+    <div class="col-md-6">
+        <label asp-for="Product.Name" class="form-label">Name</label>
+        <input asp-for="Product.Name" type="text" class="form-control" placeholder="Enter product name"/>
+    </div>
+    <div class="col-md-6">
+        <label asp-for="Product.Price" class="form-label">Price</label>
+        <input asp-for="Product.Price" type="number" class="form-control" placeholder="Enter product price" />
+    </div>
+    <div class="col-md-6">
+        <label asp-for="Product.Quantity" class="form-label">Quantity</label>
+        <input asp-for="Product.Quantity" type="number" class="form-control" placeholder="Enter product quantity" />
+    </div>
+    <div class="col-md-6">
+        <label asp-for="Product.Discount" class="form-label">Discount</label>
+        <input asp-for="Product.Discount" type="number" class="form-control" placeholder="Enter product discount" />
+    </div>
+    <div class="col-md-6">
+        <label asp-for="Product.ImageUrl" class="form-label">Image URL</label>
+        <input asp-for="Product.ImageUrl" type="text" class="form-control" placeholder="Enter product image URL" />
+    </div>
+    <div class="col-md-6">
+        <label asp-for="Product.CategoryId" class="form-label">Category</label>
+        <select asp-for="Product.CategoryId" class="form-select">
+            <option selected>Choose...</option>
+            @foreach (var item in Model.Categories)
+            {
+                <option value="@item.Id">@item.Name</option>
+            }
+        </select>
+    </div>
+    <div class="col-12">
+        <label asp-for="Product.Description" class="form-label">Description</label>
+        <textarea asp-for="Product.Description" class="form-control" placeholder="Describe product"></textarea>
+    </div>
+    <div class="col-6">
+        <a asp-controller="Manage" asp-action="Index" class="btn btn-dark w-100">Back</a>
+    </div>
+    <div class="col-6">
+        <button type="submit" class="btn btn-primary w-100">Create</button>
+    </div>
+</form>
