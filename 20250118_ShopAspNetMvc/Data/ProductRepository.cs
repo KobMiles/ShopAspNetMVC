@@ -24,11 +24,16 @@ namespace _20250118_ShopAspNetMvc.Data
             return product;
         }
 
+        public void AddProduct(Product product)
+        {
+            _context.Products.Add(product);
+            _context.SaveChanges();
+        }
+
         public void DeleteProduct(Product product)
         {
             _context.Products.Remove(product);
             _context.SaveChanges();
         }
-
     }
 }
