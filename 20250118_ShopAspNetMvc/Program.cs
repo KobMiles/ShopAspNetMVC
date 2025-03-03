@@ -21,6 +21,7 @@ namespace _20250118_ShopAspNetMvc
             builder.Services.AddControllersWithViews();
 
             builder.Services.AddScoped<IProductRepository, ProductRepository>();
+            builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 
             var app = builder.Build();
 
